@@ -16,12 +16,3 @@ Suite à la connexion avec la base de données, vous pouvez utiliser le fichier 
 
 Une fois la base de données remplie, je vous invite à lancer cette commande depuis votre terminal pour être sûr que "composer" est à jour : php composer.phar update
 
- /* Les mots de passe et codes importants :
-
-#Employé / Administrateur
-Login : admin@ventalis.com
-Mdp : 2v*&X9Rv
-
-#MySQL
-Login : Ventalis
-mdp : V3n7@I1$!
