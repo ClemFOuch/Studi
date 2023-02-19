@@ -7,6 +7,7 @@ Grafikart
 Online Tutorial
 Graven
 Python Doctor
+David Silvera
 
 Pour lancer le site en local, il vous faudra ouvrir le dossier complet "Ventalis" avec votre IDE préféré. Ensuite, il faut lancer un serveur virtuel php avec la commande depuis votre terminal : php -S localhost:8000 -t public
 En parallèle, la base de données mySql avec Xampp doit être créée.
