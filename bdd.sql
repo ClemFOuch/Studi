@@ -1,4 +1,4 @@
-BEGIN TRANSACTION;
+START TRANSACTION;
 
 CREATE TABLE post(
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -8,14 +8,14 @@ CREATE TABLE post(
     price INT NOT NULL,
     created_at DATETIME NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE category (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NOT NULL,
     slug VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE post_category (
     post_id INT UNSIGNED NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE post_category (
         REFERENCES category (id)
         ON DELETE CASCADE
         ON UPDATE RESTRICT
-)
+);
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -42,7 +42,7 @@ CREATE TABLE users (
     usersociety VARCHAR(255) NOT NULL,
     role VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE contact (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -52,9 +52,9 @@ CREATE TABLE contact (
     object VARCHAR(255) NOT NULL,
     message TEXT(65000) NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
-CREATE TABLE commande (
+CREATE TABLE command (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
     title VARCHAR(255) NOT NULL,
     name VARCHAR(255) NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE commande (
     content TEXT(65000) NOT NULL,
     price INT NOT NULL,
     PRIMARY KEY (id)
-)
+);
 
 CREATE TABLE users_command (
     users_id INT UNSIGNED NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE users_command (
         REFERENCES command (id)
         ON DELETE CASCADE
         ON UPDATE RESTRICT
-)
+);
 
-COMMIT TRANSACTION;
+COMMIT;
 
